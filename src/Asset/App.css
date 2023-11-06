@@ -1,0 +1,748 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    line-height: 1.9;
+    color: #8c8c8c;
+}
+
+body {
+    background-color: #1F1D2B;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0px 80px 80px 80px;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Poppins", sans-serif;
+    color: #000;
+}
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+a,
+a:hover {
+    text-decoration: none !important;
+}
+
+.content {
+    padding: 0rem 0;
+}
+.notFoundPage{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.heading {
+    font-size: 68px;
+    font-weight: 900;
+    color: #E6E6E6;
+    line-height: 90px;
+    letter-spacing: -2px;
+}
+.text-left{
+    justify-content: right;
+    display: flex;
+    align-items: center;
+}
+.text-left button{
+    margin-right: 20px !important;
+}
+.c-products_h1 {
+    font-family: "Poppins";
+    font-size: 62px;
+    font-weight: 600;
+}
+
+.form-control:active {
+    background: #f3f3f300 !important;
+    border-color: #fff !important;
+}
+
+.c-create_store {
+    margin-bottom: 30px;
+}
+
+.form-control {
+    color: #ffffff !important;
+}
+
+.form-control::placeholder {
+
+    color: #fff;
+
+    opacity: 1;
+    /* Firefox */
+
+}
+
+.c-ecommer_p {
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-family: Poppins, sans-serif;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-top: 21px !important;
+}
+
+.accessShopifyNxt {
+    float: right;
+}
+
+
+p.head {
+    font-weight: 900;
+    color: #fff;
+    line-height: 31px;
+}
+
+.info {
+    font-size: 38px;
+    font-weight: 600;
+    color: #fff;
+    font-family: DM Serif Display;
+}
+
+.choose {
+    font-size: 42px;
+    font-weight: 600;
+    color: #fff;
+    font-family: DM Serif Display;
+}
+
+button.nxt {
+    border: 1px solid #000;
+    background: #353535;
+    padding: 8px 25px;
+    border-radius: 15px;
+}
+
+button.nxt a {
+    color: #e4e4e4;
+}
+
+label {
+    color: #e4e4e4;
+    margin-bottom: 0;
+}
+
+.form-outer {
+    border: 1px solid #fff;
+    padding: 50px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.form-outer::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: -13%;
+
+    left: -62%;
+
+    width: 173px;
+
+    border-radius: 100%;
+
+    height: 173px;
+
+    box-shadow: 246px 10px 82px #18b2de4a;
+    z-index: -1;
+}
+
+.form-outer::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -13%;
+
+    right: 34%;
+
+    width: 173px;
+
+    border-radius: 100%;
+
+    height: 173px;
+
+    box-shadow: 246px 10px 82px #18b2de4a;
+    z-index: -1;
+}
+
+/*.outer {background: url(../images/re.jpg); background-size: 100%;background-repeat: no-repeat;padding: 0px 80px 80px 80px;position: relative;}
+
+.outer1 {background: url(../images/re.jpg);background-size: 100%;background-repeat: no-repeat;padding: 0px 80px 80px 80px;position: relative;}*/
+
+.outer1 .info {
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+.outer1 .choose {
+    font-size: 38px;
+    font-weight: 600;
+    color: #fff;
+    font-family: DM Serif Display;
+}
+
+.g13 img {
+    width: 60%;
+}
+
+p.g13 {
+    position: absolute;
+    left: -80px;
+    top: -120px;
+}
+
+.p22 {
+    position: absolute;
+    left: -20px;
+    bottom: 0;
+}
+
+.p22 img {
+    width: 80%;
+}
+
+.g4 {
+    position: absolute;
+    right: -70px;
+    bottom: 30px;
+}
+
+.g4 img {
+    width: 80%;
+}
+
+.g5 {
+    position: absolute;
+    right: -80px;
+    top: -95px;
+}
+
+.g5 img {
+    width: 80%;
+}
+
+.box-outer ul li {
+    width: 32%;
+}
+
+.box-outer ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.box-outer1 ul li {
+    margin-bottom: 8px;
+}
+
+.box-outer1 ul {
+    list-style: number;
+    color: #fff;
+}
+
+.nxt1 {
+    border: 1px solid #000;
+    background: transparent;
+    padding: 8px 45px;
+    font-size: 18px;
+    border-radius: 16px;
+}
+
+.nxt1 a {
+    color: #000;
+}
+
+.form-control {
+    border: 1px solid #e4e4e4;
+    background: transparent;
+}
+
+.form-control:active,
+.form-control:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #ffffff;
+    background: #f3f3f300;
+}
+
+.btn,
+.form-control,
+.custom-select {
+    height: 38px;
+}
+
+.custom-select:active,
+.custom-select:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: #000;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px !important;
+}
+
+.btn.btn-primary {
+    padding: 0px 24px;
+    background: #0000;
+    color: #fff;
+    width: auto;
+    margin: 20px auto 0px;
+    background-image: linear-gradient(To left, #3081EDCC, #9B51E0);
+    border-radius: 10px !important;
+}
+
+.btn.btn-primary a {
+    color: #fff;
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.c-finish_btn {
+    margin: unset !important;
+}
+
+.btn:active,
+.btn:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.box {
+    padding: 40px;
+    background: #fff;
+    -webkit-box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: -30px 30px 0px 0 rgba(0, 0, 0, 0.08);
+}
+
+.box h3 {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+label.error {
+    font-size: 12px;
+    color: red;
+}
+
+#message {
+    resize: vertical;
+}
+
+#form-message-warning,
+#form-message-success {
+    display: none;
+}
+
+#form-message-warning {
+    color: #B90B0B;
+}
+
+#form-message-success {
+    color: #55A44E;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.submitting {
+    float: left;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+}
+
+button.create {
+    background: transparent !important;
+    border: 1px solid #d7d7d7;
+    padding: 10px 25px;
+    color: #d7d7d7;
+    border-radius: 10px;
+    max-height: 45px;
+    line-height: 23px;
+}
+
+button.create a {
+    color: #d7d7d7;
+}
+
+.store {
+    width: 22% !important;
+}
+
+.meet {
+    background: -webkit-linear-gradient(left, #9B51E0, #3081ED);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1px solid #9B51E0;
+    width: 37%;
+    margin: 0 auto;
+}
+
+.tech {
+    text-align: center;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+.btn.btn-secondary {
+    background: transparent;
+    border: 1px solid #3e69cb;
+    min-height: 50px;
+    padding: 0 !important;
+    border-radius: 10px !important;
+}
+
+.c-btn__seco {
+
+    min-height: unset;
+
+}
+
+/* /////////////// checkbox  css ////////////////// */
+
+/* Style for the custom checkbox */
+
+.custom-checkbox {
+
+    display: inline-block;
+
+    position: relative;
+
+    padding-left: 40px;
+
+    margin-bottom: 15px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+
+
+/* Hide the default checkbox input */
+
+.custom-checkbox input {
+
+    position: absolute;
+
+    opacity: 0;
+
+    cursor: pointer;
+
+}
+
+
+
+/* Create a custom checkbox design */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #fff0;
+    border: 2px solid #45a8ed2e;
+    border-radius: 4px;
+}
+
+
+
+/* Style the checkbox label */
+
+.custom-checkbox:hover input~.checkmark {
+
+    background-color: #3498db;
+    /* Change color on hover */
+
+}
+
+
+
+/* Show a checkmark when the checkbox is checked */
+
+.custom-checkbox input:checked~.checkmark {
+
+    background-color: #27ae60;
+    /* Change color when checked */
+
+}
+
+
+
+/* Position the checkmark inside the checkbox */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+
+/* Show the checkmark when the checkbox is checked */
+
+.custom-checkbox input:checked~.checkmark:after {
+
+    display: block;
+
+}
+
+
+
+/* Style the checkmark icon */
+
+.custom-checkbox .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* ///////////////////////////////// */
+
+@media only screen and (max-device-width: 768px) {
+
+    .meet {
+
+        width: 80%;
+
+    }
+
+    .store {
+
+        width: auto !important;
+
+    }
+
+    .form-outer {
+
+        margin-top: 40px;
+
+    }
+
+    .form-outer::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: -13%;
+
+        left: -62%;
+
+        border-radius: 100%;
+
+        box-shadow: 246px 10px 82px #18b2de4a;
+
+    }
+
+    .form-outer::before {
+
+        content: "";
+
+        position: absolute;
+
+        bottom: -13%;
+
+        right: 34%;
+
+    }
+
+    .box-outer ul li {
+
+        width: 48%;
+
+    }
+
+
+
+}
+
+
+
+
+
+@media only screen and (max-device-width: 480px) {
+
+    /* //////////////////////custom css //////// */
+
+    body {
+
+        background-size: cover;
+
+        padding: 0px 15px 30px 15px;
+
+        background-repeat: no-repeat;
+
+        height: auto;
+
+    }
+
+    .heading {
+        line-height: 45px;
+        font-size: 36px;
+
+    }
+
+    .meet {
+
+        width: 100%;
+
+        margin: 10px auto;
+
+    }
+
+    .btn.btn-primary {
+
+        width: auto;
+
+    }
+
+    .c-creat_btn {
+
+        justify-content: unset !important;
+
+    }
+
+    .create {
+
+        margin-top: 20px;
+
+    }
+
+    .form-outer::after {
+
+        content: "";
+
+        position: absolute;
+
+        top: -13%;
+
+        left: -90%;
+
+        border-radius: 100%;
+
+        box-shadow: 246px 10px 82px #18b2de4a;
+
+    }
+
+    .form-outer::before {
+
+        content: "";
+
+        position: absolute;
+
+        bottom: -13%;
+
+        right: 64%;
+
+    }
+
+    .box-outer ul li {
+
+        width: 100%;
+
+    }
+
+    .outer {
+        /* background: url(../images/re.png); */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 0px 0px 0px 0px;
+        position: relative;
+    }
+
+    .outer1 {
+        /* background: url(../images/rec.png); */
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 0px 0px 0px 0px;
+        position: relative;
+    }
+
+    .form-outer {
+        border: 1px solid #fff;
+        padding: 50px 10px;
+        border-radius: 25px;
+    }
+
+    .g5,
+    .g4,
+    .p22 {
+        display: none;
+    }
+
+    .info {
+        font-size: 24px;
+    }
+
+    .outer1 .info {
+        font-size: 24px;
+    }
+
+    .box-outer ul {
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        padding: 0;
+        column-gap: 80px;
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .choose {
+        font-size: 26px;
+        font-weight: 500;
+        color: #e4e4e4;
+    }
+
+}
