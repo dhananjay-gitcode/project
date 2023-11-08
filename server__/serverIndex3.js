@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3010;
 const dayjs = require("dayjs");
 // Middleware
 app.use(cors({
-  origin: 'http://ai-accelerator.io',
+  origin: 'http://localhost:3000',
   methods: 'GET, POST',
   credentials: true
 }))
@@ -32,12 +32,12 @@ const themesToUpload = [
     role: "unpublished",
   },
   {
-    name: "Fitness",
+    name: "Gym/Sports",
     src: "http://ai-accelerator.io/themes/fitness.zip",
     role: "unpublished",
   },
   {
-    name: "Home",
+    name: "Home/Office",
     src: "http://ai-accelerator.io/themes/home.zip",
     role: "unpublished",
   },
@@ -47,12 +47,12 @@ const themesToUpload = [
     role: "unpublished",
   },
   {
-    name: "Pet",
+    name: "Pets",
     src: "http://ai-accelerator.io/themes/pet.zip",
     role: "unpublished",
   },
   {
-    name: "Tech",
+    name: "Technology",
     src: "http://ai-accelerator.io/themes/tech.zip",
     role: "unpublished",
   },
@@ -134,7 +134,7 @@ app.get('/dashboard', varifyUser, async (req, res) => {
 
 })
 
-app.get('/api/store/url', varifyUser, async (req, res) => {
+app.get('/api/store/url', varifyUser ,async (req, res) => {
   //console.log("")
   const user = await User.findOne({ email: req.userEmail })
   if (!user) {
@@ -148,7 +148,7 @@ app.get('/api/store/url', varifyUser, async (req, res) => {
 
 })
 
-app.post('/api/accesstoken', varifyUser, async (req, res) => {
+app.post('/api/accesstoken',varifyUser, async (req, res) => {
   console.log(req.body.accessToken)
   User.findOne({ email: req.userEmail })
     .then(user => {
@@ -177,7 +177,7 @@ app.post('/api/accesstoken', varifyUser, async (req, res) => {
     });
 })
 
-app.post('/api/store', varifyUser, async (req, res) => {
+app.post('/api/store', varifyUser,async (req, res) => {
   console.log(req.body.storeName)
   User.findOne({ email: req.userEmail })
     .then(user => {
@@ -200,7 +200,7 @@ app.post('/api/store', varifyUser, async (req, res) => {
     });
 })
 
-app.post('/api/products', varifyUser, async (req, res) => {
+app.post('/api/products', varifyUser,async (req, res) => {
   console.log(req.body.importProduct)
   User.findOne({ email: req.userEmail })
     .then(user => {
@@ -223,36 +223,40 @@ app.post('/api/products', varifyUser, async (req, res) => {
     });
 })
 
-app.post('/api/themes', varifyUser, async (req, res) => {
-  console.log(req.body.selectedItem)
+app.post("/api/themes", varifyUser,async (req, res) => {
+  console.log(req.body.selectedItem);
   User.findOne({ email: req.userEmail })
-    .then(user => {
+    .then((user) => {
       if (user) {
         user.selectedItem = req.body.selectedItem;
+        user
+          .save()
+          .then((updatedUser) => {
+            console.log("User data updated:", updatedUser);
+            res.json({ message: "User data updated." });
+          })
+          .catch((error) => {
+            console.error("Error updating user data:", error);
+            res.status(500).json({ error: "Failed to update user data." });
+          });
+      } else {
+        console.error("User not found.");
+        res.status(404).json({ error: "User not found." });
       }
-      user.save()
-        .then(updatedUser => {
-          console.log('User data updated:', updatedUser);
-          res.json({ message: 'User data updated.' });
-        })
-        .catch(error => {
-          console.error('Error updating user data:', error);
-          res.status(500).json({ error: 'Failed to update user data.' });
-        });
     })
-    .catch(error => {
-      console.error('Error finding user:', error);
-      res.status(500).json({ error: 'Failed to find user.' });
+    .catch((error) => {
+      console.error("Error finding user:", error);
+      res.status(500).json({ error: "Failed to find user." });
     });
-})
+});
+
 
 app.post('/api/users', (req, res) => {
   const userData = req.body;
   console.log(userData)
   const referralCode = generateReferralCode();
   const password = generatePassword();
-  const shopurl = `https://reactrj.myshopify.com`;
-  const access_token = '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';
+ 
   userData.password = password;
   userData.referralCode = referralCode;
 

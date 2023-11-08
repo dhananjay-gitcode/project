@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import LoaderComponet from './LoderComponent'
 import Cookies from "js-cookie";
+
 export default function CreateStore() {
   const [loading, setLoading] = useState(false);
 
@@ -40,9 +41,10 @@ export default function CreateStore() {
     );
     newTab.focus();
   };
+  
   useEffect(() => {
     (async () => {
-      const response = await axios.get(`http://ai-accelerator.io:3010/dashboard`);
+      const response = await axios.get(`http://localhost:3010/dashboard`);
       console.log(response);
       if (response.data === "Success") {
         navigate("/create-store");
@@ -52,6 +54,7 @@ export default function CreateStore() {
       }
     })();
   }, [navigate]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -62,7 +65,7 @@ export default function CreateStore() {
 
     setLoading(true);
     axios
-      .post("http://ai-accelerator.io:3010/api/store", formData)
+      .post("http://localhost:3010/api/store", formData)
       .then((response) => {
         console.log(response);
         if (response.status === 200) {

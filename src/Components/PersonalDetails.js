@@ -60,7 +60,7 @@ export default function PersonalDetails() {
       // All fields are valid, proceed with the form submission
       setLoading(true);
       axios
-        .post("http://ai-accelerator.io:3010/api/users", formData)
+        .post("http://localhost:3010/api/users", formData)
         .then((response) => {
           if (response.status === 200) {
             setLoading(false);

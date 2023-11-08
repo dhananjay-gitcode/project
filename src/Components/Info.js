@@ -15,7 +15,7 @@ export default function Info() {
   useEffect(() => {
     (async () => {
       setLoading(true)
-      const response = await axios.get(`http://ai-accelerator.io:3010/dashboard`);
+      const response = await axios.get(`http://localhost:3010/dashboard`);
       console.log(response);
       if (response.data === "Success") {
         setLoading(false)
@@ -29,7 +29,7 @@ export default function Info() {
   }, [navigate]);
 
   const accessShopifyApp = async () => {
-    const response = await axios.get(`http://ai-accelerator.io:3010/api/store/url`);
+    const response = await axios.get(`http://localhost:3010/api/store/url`);
     if (response.data.shop) {
       const newTab = window.open(
         `https://admin.shopify.com/store/${response.data.shop}/settings/apps/development`,

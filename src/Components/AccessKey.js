@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate,Link } from "react-router-dom";
 import LoaderComponet from './LoderComponent'
 import Cookies from "js-cookie";
+
 export default function AccessKey() {
 
   axios.defaults.withCredentials = true;
@@ -14,9 +15,10 @@ export default function AccessKey() {
     accessToken: "",
   });
   const navigate = useNavigate();
+  
   const accessShopifyApp = async () => {
     setLoading(true);
-    const response = await axios.get(`http://ai-accelerator.io:3010/api/store/url`);
+    const response = await axios.get(`http://localhost:3010/api/store/url`);
     if (response.data.shop) {
       setLoading(false);
       const newTab = window.open(
@@ -50,7 +52,7 @@ export default function AccessKey() {
 
     setLoading(true);
     axios
-      .post("http://ai-accelerator.io:3010/api/accesstoken", formData)
+      .post("http://localhost:3010/api/accesstoken", formData)
       .then((response) => {
         console.log(response);
         if (response.status === 200) {

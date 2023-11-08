@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect('mongodb+srv://dhananjay12116200:KnyFHx46qPOAUOW1@shopify.2zhaqto.mongodb.net/', {
   
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -30,24 +30,6 @@ const ShopSchema = new mongoose.Schema({
   email: String,
   installedTime: Date,
 });
-
-// const productSchema = new mongoose.Schema({
-//   title: String,
-//   vendor: String,
-// product_category:String,
-//   variants: [
-//     {
-//       cost_per_item: String,
-//       profit: String,
-//     },
-//   ],
-//   images: [
-//     {
-//       src: String,
-//     },
-//   ],
-// });
-
 
 
 

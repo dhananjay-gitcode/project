@@ -35,7 +35,7 @@ export default function ProductImport() {
   useEffect(() => {
     (async () => {
       setLoading(true);
-      const response = await axios.get(`http://ai-accelerator.io:3010/dashboard`);
+      const response = await axios.get(`http://localhost:3010/dashboard`);
       console.log(response);
       if (response.data === "Success") {
         setLoading(false);
@@ -56,7 +56,7 @@ export default function ProductImport() {
     } else {
       // If at least one checkbox is checked, proceed with the form submission
       axios
-        .post("http://ai-accelerator.io:3010/api/products", formData)
+        .post("http://localhost:3010/api/products", formData)
         .then((response) => {
           console.log(response);
           if (response.status === 200) {

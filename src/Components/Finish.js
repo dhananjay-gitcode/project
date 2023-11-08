@@ -12,7 +12,7 @@ export default function Finish() {
   const navigate = useNavigate();
   const accessShopifyStore = async () => {
    
-    const response = await axios.get(`http://ai-accelerator.io:3010/api/store/url`);
+    const response = await axios.get(`http://localhost:3010/api/store/url`);
     if (response.data.shop) {
       setLoading(false);
       const newTab = window.open(
