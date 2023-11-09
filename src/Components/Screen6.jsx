@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Flowshit from "../Asset/Images/flowshit.gif";
 import LoaderComponet from './LoderComponent'
 
 function Screen6() {
@@ -26,14 +27,14 @@ axios.defaults.withCredentials = true;
   //   }
   //   };
 
-   
+    const [accessTokenError, setaccessTokenError] = useState('');
     
       const handleChange = (event) => {
     setFormData({
       ...formData,
       accessToken: event.target.value,
     });
-    
+    setaccessTokenError(''); 
   };
 
   // function redirectToXYZ() {
@@ -87,70 +88,81 @@ axios.defaults.withCredentials = true;
     
 
     return (
-        <div className="c-screen_2">
-              {loading ? (
-        <LoaderComponet loading />
-      ) : null}
-            <div className="c-niche">
-                <div className="c-niche_nextbtn">
-                    <button onClick={handleSubmit}>
-                        Next
-                        <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                    {accessKeyError && <p style={{ color: 'red' }}>{accessKeyError}</p>}
-                </div>
-                <div className="c-niche_video">
-            <div className="c-niche_vide-set">
-               <video style={{borderRadius:'26px'}} width="650" height="350" controls>
-                      <source
-                        src="http://ai-accelerator.io/videoAsset/ai-shopify.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    </div>
-                </div>
-                <div className="c-niche_box-title">
-                    <h3 className="text-center">Last Step: </h3>
-                    <div className="row m-0">
-                        <div className="col-md-3">
-                            <div className="c-niche_box-list">
-                                <h4 className="c-niche_box-list-hh">1.</h4>
-                                <p>Enter your Access Token</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="c-niche_box-list">
-                                <h4 className="c-niche_box-list-hh">2.</h4>
-                                <p>Select “Install App”</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="c-niche_box-list">
-                                <h4 className="c-niche_box-list-hh">3.</h4>
-                                <p>Redirected to your Shopify store</p>
-                            </div>
-                        </div>
-                        <div className="col-md-3">
-                            <div className="c-niche_box-list">
-                                <h4 className="c-niche_box-list-hh">4.</h4>
-                                <p>After installation, you are ready to go</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="c-niche_box_sc5">
-                        <input
-                            type='text'
-                            name="accessToken"
-                            id="accessToken"
-                            value={formData.accessToken}
-                            onChange={handleChange}
-                            placeholder='Enter Access Token Here...'
-                        />
-                        {accessKeyError && <p style={{ color: 'red' }}>{accessKeyError}</p>}
-                    </div>
-                </div>
-            </div>
+      <div className="c-screen_2">
+        <div
+          className="c-cricle_img"
+          // style={{ backgroundImage: `url(${Flowshit}) `, width: '700px', height: '700px', backgroundSize: 'cover', }}
+        >
+          <img src={Flowshit} alt="" srcSet="" />
         </div>
+        {loading ? <LoaderComponet loading /> : null}
+        <div className="c-niche">
+          <div className="c-niche_nextbtn">
+            <button onClick={handleSubmit}>
+              Next
+              <i className="fa-solid fa-arrow-right"></i>
+            </button>
+    
+          </div>
+          <div className="c-niche_video">
+            <div className="c-niche_vide-set">
+              <video
+                width="100%"
+                height="100%"
+                style={{ borderRadius: "10px" }}
+                controls
+              >
+                <source
+                  src="http://ai-accelerator.io/videoAsset/ai-shopify.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <div className="c-niche_box-title">
+            <h3 className="text-center">Last Step: </h3>
+            <div className="row m-0">
+              <div className="col-md-3">
+                <div className="c-niche_box-list">
+                  <h4 className="c-niche_box-list-hh">1.</h4>
+                  <p>Enter your Access Token</p>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="c-niche_box-list">
+                  <h4 className="c-niche_box-list-hh">2.</h4>
+                  <p>Select “Install App”</p>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="c-niche_box-list">
+                  <h4 className="c-niche_box-list-hh">3.</h4>
+                  <p>Redirected to your Shopify store</p>
+                </div>
+              </div>
+              <div className="col-md-3">
+                <div className="c-niche_box-list">
+                  <h4 className="c-niche_box-list-hh">4.</h4>
+                  <p>After installation, you are ready to go</p>
+                </div>
+              </div>
+            </div>
+            <div className="c-niche_box_sc5">
+              <input
+                type="text"
+                name="accessToken"
+                id="accessToken"
+                value={formData.accessToken}
+                onChange={handleChange}
+                placeholder="Enter Access Token Here..."
+              />
+              {accessKeyError && (
+                <p style={{ color: "red" }}>{accessKeyError}</p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     );
 }
 

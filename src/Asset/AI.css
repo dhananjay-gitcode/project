@@ -2,10 +2,11 @@ a {
     text-decoration: none;
 }
 
-#body {
+body {
     background: #060211;
-    height: 100%;
+    height: 100vh;
     background-image: url(./Images/Dust.png);
+    overflow: hidden;
 }
 
 .c-main {
@@ -49,7 +50,7 @@ a {
 }
 
 .c-cricle_img img {
-    width: 85%;
+    width: 100%;
     box-shadow: 0px 0px 290px #0d2dd2;
     border-radius: 100%;
     position: relative;
@@ -60,7 +61,7 @@ a {
 .c-content_box {
     position: absolute;
     top: 0;
-    padding: 150px 71px 100px 100px;
+    padding: 3% 6%;
     display: block;
     width: 100%;
 }
@@ -71,12 +72,16 @@ a {
     align-items: center;
 }
 
+.c-content_cont h2 {
+    line-height: 150px;
+}
+
 .c-content_cont h2 .c-content_span-1 {
-    font-size: 175px;
+    font-size: 100px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
     background: linear-gradient(288deg, #30cfd000 60%, #ffffff 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -84,12 +89,16 @@ a {
     -webkit-text-stroke-width: 2px;
 }
 
+.c-content_cont h2 .c-content_span-1 {
+    font-size: 178px;
+}
+
 .c-content_cont h2 .c-content_span-3 {
-    font-size: 175px;
+    font-size: 100px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 1px;
+    font-family: 'Bebas Neue';
+    letter-spacing: 3px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-color: #EFEFEF;
@@ -97,47 +106,55 @@ a {
     margin-left: 15px;
 }
 
+.c-content_cont h2 .c-content_span-3 {
+    font-size: 178px;
+}
+
 .c-content_cont h2 .c-content_span-2 {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: 400;
-    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    font-family: 'Bebas Neue';
     text-transform: uppercase;
     color: #EFEFEF;
     margin-left: 15px;
 }
 
 .c-content_cont p {
-    font-size: 24px;
-    font-family: DM Sans;
-    font-weight: 500;
-    line-height: 29.56px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.56px;
+    font-family: 'DM Sans', sans-serif;
     color: #EFEFEF;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 
 /* ///////form////////// */
 .c-content_formbox {
-    padding: 38px 50px 58px 55px;
+    padding: 18px 40px 22px 45px;
     border-radius: 35.025px;
     border: 0.876px solid #37F3FF;
     background: linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
     backdrop-filter: blur(50px);
     margin-top: 40px;
+    border-left-width: 0px;
+    border-right-width: 0px;
 }
 
 .c-content_formbox h3 {
     color: #FFF;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 48px;
+    font-family: 'Bebas Neue';
+    font-size: 40px;
     font-style: normal;
+    letter-spacing: 2px;
     font-weight: 400;
-    line-height: 82px;
+    line-height: 60px;
 }
 
 .c-content_formbox form .c-content_formb_input p {
     color: #E2E2E2;
     font-family: DM Sans;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     margin-bottom: 0px;
@@ -149,7 +166,7 @@ a {
     width: 100%;
     background-color: #faebd700;
     color: #fff;
-    padding: 14px;
+    padding: 5px 10px;
 }
 
 .c-content_formbox form .c-content_formb_input button {
@@ -158,11 +175,11 @@ a {
     background: #37F3FF;
     width: 100%;
     text-align: -webkit-left;
-    margin-top: 54px;
+    margin-top: 30px;
     padding: 4px 30px;
     color: #102FD4;
     font-family: Bebas Neue;
-    font-size: 41.041px;
+    font-size: 30.041px;
     font-style: normal;
     font-weight: 400;
     display: flex;
@@ -171,19 +188,25 @@ a {
 }
 
 .c-content_formbox form .c-content_formb_input button img {
-    width: 75%;
+    width: 80%;
 }
 
 
 /* //////////////////////////////////screen two  css///////////////////// */
 .c-screen_2 {
-    background-image: url(./Images/Animate-23scs.svg);
+    /* background-image: url(./Images/Animate-23scs.svg); */
+    /* background-image: url(./Images/flowshit.gif); */
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+
 }
 
 .c-niche {
-    padding: 100px 90px 134px 83px;
+    padding: 3% 6%;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .c-niche_nextbtn {
@@ -197,16 +220,16 @@ a {
     color: #000;
     text-align: center;
     font-family: Poppins;
-    font-size: 30.64px;
+    font-size: 20.64px;
     font-style: normal;
     font-weight: 500;
-    line-height: 41.14px;
+    line-height: 25.14px;
     padding: 10px 20px;
     text-decoration: none;
 }
 
 .c-niche_nextbtn button i {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .c-niche_video {
@@ -215,58 +238,80 @@ a {
 }
 
 .c-niche_vide-set {
-    width: 640px;
-    height: 350px;
+    width: 400px;
+    height: 230px;
     border-radius: 26px;
     background: #D9D9D9;
 }
 
 .c-niche_box-title {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .c-niche_box-title h3 {
     color: #D9D9D9;
     font-family: Bebas Neue;
-    font-size: 76px;
+    font-size: 60px;
     font-style: normal;
     font-weight: 400;
-    line-height: 121px;
+    line-height: 81px;
+    letter-spacing: 2.5px;
+    margin-bottom: 30px;
 }
 
 .c-niche_box-main {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 172px;
+    height: 100%;
+    outline: none;
 }
 
 .c-niche_box-main p {
-    border-radius: 40.002px;
+    border-radius: 30.002px;
     border: 1px solid #37F3FF;
     background: linear-gradient(169deg, rgba(58, 129, 191, 0.08) 1.85%, rgba(65, 48, 90, 0.08) 98.72%);
     backdrop-filter: blur(57.1061897277832px);
     color: #FFF;
     text-align: center;
     font-family: Poppins;
-    font-size: 17px;
+    font-size: 15px;
     font-style: normal;
     justify-content: center;
     display: flex;
+    font-style: normal;
     align-items: center;
     font-weight: 400;
     width: 70% !important;
-    line-height: 38px;
+    /* line-height: 38px; */
     padding: 7px 20px;
     cursor: pointer;
     background-color: #0b184e;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.selected-niche {
+    border: none;
 }
 
 .c-niche_box-item {
     border-radius: 57.106px;
     background: linear-gradient(251deg, #17203F 0%, #000 99.76%);
-    width: 100%;
-    height: 200px;
+    width: 170px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.selected-niche .c-niche_box-item {
+    border: 0.876px solid #37F3FF;
+}
+
+.c-niche_box-item img {
+    width: 50px;
 }
 
 .c-niche_box-link {
@@ -302,9 +347,10 @@ a {
     align-items: center;
     font-weight: 400;
     width: 70% !important;
-    line-height: 38px;
     padding: 7px 20px;
     background-color: #0b184e;
+    border-left-width: 0px;
+    border-right-width: 0px;
 }
 
 .clicked-button {
@@ -316,11 +362,23 @@ a {
 .c-niche_boxs3-item {
     border-radius: 57.106px;
     background: linear-gradient(251deg, #17203F 0%, #000 99.76%);
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 145px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.c-niche_boxs3-item img {
+    width: 50px;
+}
+
+.clicked-button .c-niche_boxs3-item {
+    border: 0.876px solid #37F3FF;
+}
+
+.clicked-button {
+    border: 0.876px solid #37F3FF;
 }
 
 .c-niche_boxs3-link {
@@ -342,19 +400,21 @@ a {
 .c-niche_box-list .c-niche_box-list-hh {
     color: #FFF;
     font-family: Bebas Neue;
-    font-size: 107.077px;
+    font-size: 80.077px;
     font-style: normal;
     font-weight: 400;
-    line-height: 135.123px;
+    line-height: 100.123px;
+    line-height: 24px;
 }
 
 .c-niche_box-list p {
     color: #F1F1F1;
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
     margin-bottom: -10px;
+    line-height: 20px;
 }
 
 /* //////////////////////////////////////screen 5/////////////////////// */
@@ -362,6 +422,8 @@ a {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .c-niche_box_sc5 button {
@@ -439,6 +501,8 @@ input#accessToken:focus {
     width: 80%;
     border-radius: 100%;
     box-shadow: 10px 10px 310px #1e42ff;
+    position: relative;
+    top: -90px;
 }
 
 .c-cricle_hss img {
@@ -449,10 +513,10 @@ input#accessToken:focus {
 .c-content_boxh3 h3 {
     color: #D9D9D9;
     font-family: Bebas Neue;
-    font-size: 180.51px;
+    font-size: 120.51px;
     font-style: normal;
     font-weight: 400;
-    line-height: 191.575px;
+    line-height: 100.575px;
     text-align: center;
 }
 
@@ -460,26 +524,34 @@ input#accessToken:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 35px;
+    margin-top: 15px;
+}
+
+.notFoundPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    flex-direction: column;
 }
 
 .c-content_boxscree-6_vide {
-    width: 640px;
-    height: 350px;
+    width: 443px;
+    height: 250px;
     border-radius: 26px;
     background: #D9D9D9;
 }
 
 .c-content_boxscree-btn {
     text-align: center;
-    margin-top: 60px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
 
 .c-content_boxscree-btn button {
-    width: 388px;
-    height: 78px;
+    padding: 2px 40px;
     border-radius: 16px;
     border: 3px solid #37F3FF;
     background: #37F3FF;
@@ -488,19 +560,19 @@ input#accessToken:focus {
     justify-content: center;
     color: #102FD4;
     font-family: Bebas Neue;
-    font-size: 41.041px;
+    font-size: 32.041px;
     font-style: normal;
     font-weight: 400;
-    line-height: 70.111px;
+    line-height: 50.111px;
     text-decoration: none;
 }
 
 /* /////////////////////////////screen 7////////////////// */
 .c-content_boxh7 h3 {
-    font-size: 175px;
+    font-size: 160px;
     font-weight: 500;
     text-transform: uppercase;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue';
     letter-spacing: 1px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -531,4 +603,747 @@ input#accessToken:focus {
 
 .c-niche_nextbtn a i {
     margin-left: 20px;
+}
+
+.c_screen_8box {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* /////////////////////////// */
+input:focus-visible {
+    outline: 0px;
+}
+
+/* ////////////////////////////changes ///////////// */
+@media (max-width: 10000px) and (min-width: 5000px) {
+
+    /* //////////////s1///////////////// */
+    .c-content_box {
+        padding: 7% 11%;
+    }
+
+    .c-content_cont h2 .c-content_span-1 {
+        font-size: 350px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_cont h2 .c-content_span-3 {
+        font-size: 350px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont h2 .c-content_span-2 {
+        font-size: 150px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont p {
+        font-size: 97px;
+        line-height: 135.56px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_formbox {
+        margin-top: 90px;
+        padding: 65px 80px 95px 85px;
+    }
+
+    .c-content_formbox h3 {
+        font-size: 110px;
+        letter-spacing: 5px;
+        line-height: 180px;
+    }
+
+    .c-content_formbox form .c-content_formb_input p {
+        font-size: 55px;
+        letter-spacing: 5px;
+    }
+
+    .c-content_formbox form .c-content_formb_input input {
+        padding: 35px 50px;
+        font-size: 50px;
+        font-weight: 600;
+        letter-spacing: 5px;
+    }
+
+    .c-content_formbox form .c-content_formb_input button {
+        margin-top: 60px;
+        padding: 30px 60px;
+        font-size: 70.041px;
+        font-weight: 400;
+    }
+
+    .c-content_formbox form .c-content_formb_input button img {
+        width: 80%;
+    }
+
+    /* /////////////////////////screen 2////////////////////// */
+    .c-niche {
+        padding: 5% 8%;
+    }
+
+    .c-niche_nextbtn button {
+        border-radius: 26px;
+        font-size: 50.64px;
+        line-height: 45.14px;
+        padding: 40px 50px;
+    }
+
+    .c-niche_vide-set {
+        width: 1400px;
+        height: 900px;
+    }
+
+    .c-niche_box-title h3 {
+        font-size: 300px;
+        line-height: 344px;
+        letter-spacing: 8.5px;
+        margin-bottom: 70px;
+    }
+
+    .c-niche_box-main {
+        width: 700px;
+    }
+
+    .c-niche_box-item {
+        width: 700px;
+        height: 600px;
+        border-radius: 170px;
+    }
+
+    .c-niche_box-item img {
+        width: 150px;
+    }
+
+    .c-niche_box-main p {
+        border-radius: 100.002px;
+        font-size: 55px;
+        letter-spacing: 4px;
+    }
+
+    /* /////////////////////////3 screen///////////// */
+    .c-niche_boxs3-item {
+        border-radius: 107.106px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .c-niche_boxs3-item img {
+        width: 130px;
+    }
+
+    .c-niche_boxs3-main button {
+        border-radius: 40.002px;
+        font-size: 40px;
+        padding: 7px 20px;
+    }
+
+    /* ////////////////////////////screen 4/////////////// */
+    .c-niche_box-title .row {
+        margin: 2% 0% 0% 0% !important;
+    }
+
+    .c-niche_box-list .c-niche_box-list-hh {
+        font-size: 280.077px;
+        line-height: 0px;
+    }
+
+    .c-niche_box-list p {
+        font-size: 80px;
+        line-height: 100px;
+    }
+
+    /* ///////////////////screen 5///////////// */
+    .c-niche_box_sc5 {
+        margin-top: 5%;
+    }
+
+    #store {
+        width: 70%;
+        padding: 29px 44px;
+        font-size: 74px;
+    }
+
+    /* ////////////////////////6///screen /////////////// */
+    #accessToken {
+        width: 70%;
+        padding: 29px 44px;
+        font-size: 74px;
+    }
+}
+
+@media (max-width: 5000px) and (min-width: 3000px) {
+
+    /* //////////////s1///////////////// */
+    .c-content_box {
+        padding: 7% 11%;
+    }
+
+    .c-content_cont h2 .c-content_span-1 {
+        font-size: 230px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_cont h2 .c-content_span-3 {
+        font-size: 230px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont h2 .c-content_span-2 {
+        font-size: 90px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont p {
+        font-size: 77px;
+        line-height: 115.56px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_formbox {
+        padding: 45px 60px 75px 65px;
+    }
+
+    .c-content_formbox h3 {
+        font-size: 80px;
+        letter-spacing: 5px;
+        line-height: 150px;
+    }
+
+    .c-content_formbox form .c-content_formb_input p {
+        font-size: 32px;
+    }
+
+    .c-content_formbox form .c-content_formb_input input {
+        padding: 20px 30px;
+    }
+
+    .c-content_formbox form .c-content_formb_input button {
+        margin-top: 40px;
+        padding: 20px 40px;
+        font-size: 50.041px;
+        font-weight: 400;
+    }
+
+    .c-content_formbox form .c-content_formb_input button img {
+        width: 80%;
+    }
+
+    /* /////////////////////////screen 2////////////////////// */
+    .c-niche {
+        padding: 5% 8%;
+    }
+
+    .c-niche_nextbtn button {
+        border-radius: 26px;
+        font-size: 50.64px;
+        line-height: 45.14px;
+        padding: 40px 50px;
+    }
+
+    .c-niche_vide-set {
+        width: 900px;
+        height: 500px;
+    }
+
+    .c-niche_box-title h3 {
+        font-size: 200px;
+        line-height: 200px;
+        letter-spacing: 8.5px;
+        margin: 3% 0px;
+    }
+
+    .c-niche_box-main {
+        width: 400px;
+    }
+
+    .c-niche_box-item {
+        width: 400px;
+        height: 400px;
+        border-radius: 100px;
+    }
+
+    .c-niche_box-item img {
+        width: 100px;
+    }
+
+    .c-niche_box-main p {
+        border-radius: 80.002px;
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    /* /////////////////////////3 screen///////////// */
+    .c-niche_boxs3-item {
+        border-radius: 107.106px;
+        width: 350px;
+        height: 350px;
+    }
+
+    .c-niche_boxs3-item img {
+        width: 130px;
+    }
+
+    .c-niche_boxs3-main button {
+        border-radius: 40.002px;
+        font-size: 40px;
+        padding: 7px 20px;
+    }
+
+    /* ////////////////////////////screen 4/////////////// */
+    .c-niche_box-title .row {
+        margin: 2% 0% 0% 0% !important;
+    }
+
+    .c-niche_box-list .c-niche_box-list-hh {
+        font-size: 280.077px;
+        line-height: 0px;
+    }
+
+    .c-niche_box-list p {
+        font-size: 55px;
+        line-height: 80px;
+    }
+
+    /* ///////////////////screen 5///////////// */
+    .c-niche_box_sc5 {
+        margin-top: 5%;
+    }
+
+    #store {
+        width: 70%;
+        padding: 25px 44px;
+        font-size: 64px;
+    }
+
+    /* ////////////////////////////////6 screen /////////// */
+    #accessToken {
+        width: 70%;
+        padding: 25px 44px;
+        font-size: 64px;
+    }
+}
+
+/* ////////////////////////// */
+@media (max-width: 3000px) and (min-width: 2559px) {
+
+    /* //////////////s1///////////////// */
+    .c-content_box {
+        padding: 7% 11%;
+    }
+
+    .c-content_cont h2 .c-content_span-1 {
+        font-size: 180px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_cont h2 .c-content_span-3 {
+        font-size: 180px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont h2 .c-content_span-2 {
+        font-size: 65px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont p {
+        font-size: 52px;
+        line-height: 90.56px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_formbox {
+        padding: 35px 60px 35px 65px;
+    }
+
+    .c-content_formbox h3 {
+        font-size: 60px;
+        letter-spacing: 5px;
+        line-height: 70px;
+    }
+
+    .c-content_formbox form .c-content_formb_input p {
+        font-size: 22px;
+    }
+
+    .c-content_formbox form .c-content_formb_input input {
+        padding: 10px 20px;
+    }
+
+    .c-content_formbox form .c-content_formb_input button {
+        margin-top: 40px;
+        padding: 10px 40px;
+        font-size: 40.041px;
+        font-weight: 400;
+    }
+
+    .c-content_formbox form .c-content_formb_input button img {
+        width: 80%;
+    }
+
+    /* /////////////////////////screen 2////////////////////// */
+    .c-niche {
+        padding: 5% 8%;
+    }
+
+    .c-niche_nextbtn button {
+        border-radius: 26px;
+        font-size: 40.64px;
+        line-height: 35.14px;
+        padding: 30px 40px;
+    }
+
+    .c-niche_vide-set {
+        width: 800px;
+        height: 420px;
+    }
+
+    .c-niche_box-title h3 {
+        font-size: 150px;
+        line-height: 150px;
+        letter-spacing: 8.5px;
+        margin: 2% 0%;
+    }
+
+    .c-niche_box-main {
+        width: 300px;
+    }
+
+    .c-niche_box-item {
+        width: 300px;
+        height: 300px;
+        border-radius: 80px;
+    }
+
+    .c-niche_box-item img {
+        width: 90px;
+    }
+
+    .c-niche_box-main p {
+        border-radius: 60.002px;
+        font-size: 22px;
+        letter-spacing: 2.2px;
+    }
+
+    /* /////////////////////////3 screen///////////// */
+    .c-niche_boxs3-item {
+        border-radius: 80.106px;
+        width: 300px;
+        height: 300px;
+    }
+
+    .c-niche_boxs3-item img {
+        width: 100px;
+    }
+
+    .c-niche_boxs3-main button {
+        border-radius: 40.002px;
+        font-size: 30px;
+        padding: 7px 20px;
+    }
+
+    /* ////////////////////////////screen 4/////////////// */
+    .c-niche_box-title .row {
+        margin: 3.5% 0% 0% 0% !important;
+    }
+
+    .c-niche_box-list .c-niche_box-list-hh {
+        font-size: 250.077px;
+        line-height: 0px;
+    }
+
+    .c-niche_box-list p {
+        font-size: 35px;
+        line-height: 50px;
+        margin-bottom: -50px;
+    }
+
+    /* ///////////////////screen 5///////////// */
+    .c-niche_box_sc5 {
+        margin-top: 5%;
+    }
+
+    #store {
+        width: 70%;
+        padding: 20px 44px;
+        font-size: 35px;
+    }
+
+    /* ////////////////////////////////6 screen /////////// */
+    #accessToken {
+        width: 70%;
+        padding: 20px 44px;
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 2560px) and (min-width: 1921px) {
+
+    /* //////////////s1///////////////// */
+    .c-content_box {
+        padding: 5% 11%;
+    }
+
+    .c-content_cont h2 .c-content_span-1 {
+        font-size: 165px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_cont h2 .c-content_span-3 {
+        font-size: 165px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont h2 .c-content_span-2 {
+        font-size: 60px;
+        letter-spacing: 6px;
+        margin-left: 25px;
+    }
+
+    .c-content_cont p {
+        font-size: 37px;
+        line-height: 55.56px;
+        letter-spacing: 6px;
+    }
+
+    .c-content_formbox {
+        padding: 28px 60px 28px 65px;
+    }
+
+    /* /////////////////////////screen 2////////////////////// */
+    .c-niche {
+        padding: 4% 8%;
+    }
+
+    .c-niche_nextbtn button {
+        border-radius: 22px;
+        font-size: 22.64px;
+        line-height: 22.14px;
+        padding: 15px 30px;
+    }
+
+    .c-niche_vide-set {
+        width: 570px;
+        height: 340px;
+    }
+
+    .c-niche_box-title h3 {
+        font-size: 90px;
+        line-height: 60px;
+        letter-spacing: 2.5px;
+        margin: 2% 0%;
+    }
+
+    .c-niche_box-main {
+        width: 250px;
+    }
+
+    .c-niche_box-item {
+        width: 250px;
+        height: 250px;
+        border-radius: 70px;
+    }
+
+    .c-niche_box-item img {
+        width: 80px;
+    }
+
+    .c-niche_box-main p {
+        border-radius: 60.002px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    /* /////////////////////////3 screen///////////// */
+    .c-niche_boxs3-item {
+        border-radius: 80.106px;
+        width: 250px;
+        height: 250px;
+    }
+
+    .c-niche_boxs3-item img {
+        width: 80px;
+    }
+
+    .c-niche_boxs3-main button {
+        border-radius: 40.002px;
+        font-size: 24px;
+        padding: 7px 20px;
+    }
+
+    /* ////////////////////////////screen 4/////////////// */
+    .c-niche_box-title .row {
+        margin: 7% 0% 0% 0% !important;
+    }
+
+    .c-niche_box-list .c-niche_box-list-hh {
+        font-size: 200.077px;
+        line-height: 0px;
+    }
+
+    .c-niche_box-list p {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: -50px;
+    }
+
+    /* ///////////////////screen 5///////////// */
+    .c-niche_box_sc5 {
+        margin-top: 6%;
+    }
+
+    #store {
+        width: 70%;
+        padding: 15px 44px;
+        font-size: 30px;
+    }
+
+    /* ////////////////////////////////6 screen /////////// */
+    #accessToken {
+        width: 70%;
+        padding: 15px 44px;
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 1440px) {
+
+    /* //////////////s1///////////////// */
+    .c-content_box {
+        padding: 4% 11%;
+    }
+
+    .c-content_cont h2 .c-content_span-1 {
+        font-size: 130px;
+        letter-spacing: 5px;
+    }
+
+    .c-content_cont h2 .c-content_span-3 {
+        font-size: 130px;
+        letter-spacing: 5px;
+        margin-left: 20px;
+    }
+
+    .c-content_cont h2 .c-content_span-2 {
+        font-size: 40px;
+        letter-spacing: 5px;
+        margin-left: 20px;
+    }
+
+    .c-content_cont p {
+        font-size: 30px;
+        line-height: 40.56px;
+        letter-spacing: 5px;
+    }
+
+    .c-content_formbox {
+        padding: 20px 55px 20px 55px;
+    }
+
+    /* /////////////////////////screen 2////////////////////// */
+    .c-niche {
+        padding: 4% 8%;
+    }
+
+    .c-niche_nextbtn button {
+        border-radius: 22px;
+        font-size: 22.64px;
+        line-height: 22.14px;
+        padding: 15px 30px;
+    }
+
+    .c-niche_vide-set {
+        width: 480px;
+        height: 270px;
+    }
+
+    .c-niche_box-title h3 {
+        font-size: 70px;
+        line-height: 60px;
+        letter-spacing: 2.5px;
+        margin: 1.5% 0%;
+    }
+
+    .c-niche_box-main {
+        width: 210px;
+    }
+
+    .c-niche_box-item {
+        width: 210px;
+        height: 180px;
+        border-radius: 50px;
+    }
+
+    .c-niche_box-item img {
+        width: 70px;
+    }
+
+    .c-niche_box-main p {
+        border-radius: 60.002px;
+        font-size: 18px;
+        letter-spacing: 1.5px;
+    }
+
+    /* /////////////////////////3 screen///////////// */
+    .c-niche_boxs3-item {
+        border-radius: 60.106px;
+        width: 200px;
+        height: 180px;
+    }
+
+    .c-niche_boxs3-item img {
+        width: 70px;
+    }
+
+    .c-niche_boxs3-main button {
+        border-radius: 40.002px;
+        font-size: 20px;
+        padding: 7px 20px;
+    }
+
+    /* ////////////////////////////screen 4/////////////// */
+    .c-niche_box-title .row {
+        margin: 8% 0% 0% 0% !important;
+    }
+
+    .c-niche_box-list .c-niche_box-list-hh {
+        font-size: 90.077px;
+        line-height: 0px;
+    }
+
+    .c-niche_box-list p {
+        font-size: 18px;
+        line-height: auto;
+        margin-bottom: -10px;
+    }
+
+    /* ///////////////////screen 5///////////// */
+    .c-niche_box_sc5 {
+        margin-top: 4%;
+    }
+
+    #store {
+        width: 70%;
+        padding: 10px 44px;
+        font-size: 20px;
+    }
+
+    /* ////////////////////////////////6 screen /////////// */
+    #accessToken {
+        width: 70%;
+        padding: 10px 44px;
+        font-size: 20px;
+    }
 }

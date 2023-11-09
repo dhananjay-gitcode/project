@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Flowshit from "../Asset/Images/flowshit.gif";
 import Group1314 from "../Asset/Images/Group-1314.png"
 import '../Asset/AI.css'
@@ -82,13 +82,13 @@ function Screen1() {
     }
   };
 
-  // function redirectToXYZ() {
-  //   const newTab = window.open(
-  //     `https://www.jacoblevinrad.com`,
-  //     "_blank"
-  //   );
-  //   newTab.focus();
-  // }
+  function redirectToXYZ() {
+    const newTab = window.open(
+      `https://www.jacoblevinrad.com`,
+      "_blank"
+    );
+    newTab.focus();
+  }
 
  const handleSubmit = (e) => {
   e.preventDefault(); // Prevent the form from submitting in the default way (which appends data to the URL).

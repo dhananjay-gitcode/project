@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from "react";
 import Pets from "../Asset/Images/Pets.png";
 import Home from "../Asset/Images/home.png";
+import Flowshit from "../Asset/Images/flowshit.gif";
 import Dumbbell from "../Asset/Images/Dumbbell.png";
 import Workstation from "../Asset/Images/Workstation.png";
 import Spa from "../Asset/Images/Spa-Flower.png";
@@ -9,9 +10,9 @@ import { useNavigate } from "react-router-dom";
 import LoaderComponet from './LoderComponent'
 
 function Screen2() {
+    axios.defaults.withCredentials = true;
 
-   axios.defaults.withCredentials = true;
-  const [responseMessage, setResponseMessage] = useState("");
+   const [responseMessage, setResponseMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -21,19 +22,16 @@ function Screen2() {
 
  useEffect(() => {
    (async () => {
-     setLoading(true);
      const response = await axios.get(`http://ai-accelerator.io:3010/dashboard`);
      console.log(response);
      if (response.data === "Success") {
-       setLoading(false);
        navigate("/s2");
        console.log("Successded OK");
      } else {
-       setLoading(false);
        navigate("/");
      }
    })();
- }, [navigate]);
+ }, []);
 
   const niches = [
     { image: Pets, label: "Pets" },
@@ -78,55 +76,65 @@ const [themeError, setThemeError] = useState('');
 
 
     return (
-        <div className="c-screen_2">
-            {loading ? (
-        <LoaderComponet loading />
-      ) : null}
-            <div className="c-niche">
-                <div className="c-niche_nextbtn">
-                    {/* <a href="http">Next<i className="fa-solid fa-arrow-right"></i></a> */}
-                    <button 
-                    onClick={handleSubmit}
-                    >Next<i className="fa-solid fa-arrow-right"></i></button>
+      <div className="c-screen_2">
+        <div
+          className="c-cricle_img"
+          // style={{ backgroundImage: `url(${Flowshit}) `, width: '700px', height: '700px', backgroundSize: 'cover', }}
+        >
+          <img src={Flowshit} alt="" srcSet="" />
+        </div>
+        {loading ? <LoaderComponet loading /> : null}
+        <div className="c-niche">
+          <div className="c-niche_nextbtn">
+            {/* <a href="http">Next<i className="fa-solid fa-arrow-right"></i></a> */}
+            <button onClick={handleSubmit}>
+              Next<i className="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
-           {themeError && <p style={{ color: 'red' }}>{themeError}</p>}
-                <div className="c-niche_video">
-                    <div className="c-niche_vide-set">
+          <div className="c-niche_video">
+            <div className="c-niche_vide-set">
               {/* You can add content or components here */}
-              <video style={{borderRadius:'26px'}} width="650" height="350" controls>
-                      <source
-                        src="http://ai-accelerator.io/videoAsset/ai-shopify.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
+              <video
+                width="100%"
+                height="100%"
+                style={{ borderRadius: "10px" }}
+                controls
+              >
+                <source
+                  src="http://ai-accelerator.io/videoAsset/ai-shopify.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <div className="c-niche_box-title">
+            <h3>Select your niche:</h3>
+            {themeError && <p style={{ color: "red", textAlign:'center' }}>{themeError}</p>}
+            <div className="row m-0">
+              {niches.map((niche, index) => (
+                <div className="col-lg" key={index}>
+                  <div
+                    className={`c-niche_box-main ${
+                      formData.selectedItem === niche.label
+                        ? "selected-niche"
+                        : ""
+                    }`}
+                    onClick={() => handleItemClick(niche.label)}
+                  >
+                    <div className="c-niche_box-item">
+                      <img src={niche.image} alt={niche.label} />
                     </div>
-                </div>
-                <div className="c-niche_box-title">
-                    <h3>Select your niche:</h3>
-                    <div className="row m-0">
-                         {niches.map((niche, index) => (
-              <div className="col-lg" key={index}>
-                <div
-                  className={`c-niche_box-main ${
-                    formData.selectedItem === niche.label ? "selected-niche" : ""
-                  }`}
-                  onClick={() => handleItemClick(niche.label)}
-                >
-                  <div className="c-niche_box-item">
-                    <img src={niche.image} alt={niche.label} />
-                  </div>
-                  <div className="c-niche_box-link">
-                    <p>{niche.label}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+                    <div className="c-niche_box-link">
+                      <p>{niche.label}</p>
                     </div>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
         </div>
-        {responseMessage}
-        </div>
-        )
+      </div>
+    );
 
 }
 

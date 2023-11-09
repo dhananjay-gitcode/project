@@ -12,11 +12,13 @@ const app = express();
 const PORT = process.env.PORT || 3010;
 const dayjs = require("dayjs");
 // Middleware
-app.use(cors({
-  origin: 'http://localhost:3000',
-  methods: 'GET, POST',
-  credentials: true
-}))
+app.use(
+  cors({
+    origin: "http://localhost:3003",
+    methods: "GET, POST",
+    credentials: true,
+  })
+);
 
 
 
